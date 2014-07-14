@@ -1,0 +1,21 @@
+<h1>Гитары</h1>
+<ul class="nav nav-tabs">
+      <li><%= link_to "Главная", root_url %></li>
+      <li class="active">
+        <%= link_to "Гитары" %>
+      </li>
+      <li><%= link_to "Бас-гитары" %></li>
+      <li><%= link_to "Информация" %></li>
+      <li><%= link_to "Форум" %></li>
+</ul>
+<ul style="list-style-type:none">
+    <% @models.each do |model| %>
+      <li>
+        <%= link_to(model) do %>
+            <%= model.name %>
+        <% end %>
+
+      </li>
+    <% end %>
+ </ul>
+<%= link_to "Добавить новую модель", new_g_model_path %>

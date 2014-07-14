@@ -1,0 +1,9 @@
+<h1>Добавить новую гитару</h1>
+<%= form_for @guitar do |f| %>
+<%= f.label 'Название гитары' %>
+<%= f.text_field :name %>
+<%= f.label 'ID модели' %>
+<%= f.text_field :g_model_id %>
+<%= f.label ':  ' %>
+<%= f.submit 'Create guitar' %>
+<% end %>

@@ -1,0 +1,11 @@
+<% if @model.guitars.any? %>
+    <ul style="list-style-type:none">
+        <% @guitars.each do |g| %>
+            <li>
+                <%= g.name %>
+                <%= link_to "Редактировать", edit_guitar_path(g) %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+<%= link_to "Добавить новую гитару", new_guitar_path %>
